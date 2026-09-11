@@ -86,7 +86,7 @@ export default function Portfolio() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
 
           {/* LEFT - INTRO */}
-          <div className="reveal">
+          <div className="reveal order-2 lg:order-1">
             <p className="mb-5 font-mono text-xs uppercase tracking-[.28em] text-[#d7ff55]">
               Available for opportunities
             </p>
@@ -105,9 +105,15 @@ export default function Portfolio() {
             <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href="#projects"
-                className="flex items-center gap-2 bg-[#d7ff55] px-5 py-3 text-sm font-bold text-black hover:opacity-90"
+                className="group flex items-center gap-2 bg-[#d7ff55] px-5 py-3 text-sm font-bold text-black transition-all duration-200 hover:opacity-90"
               >
-                View projects <ArrowUpRight size={16} />
+                <span className="transition-all duration-200 group-hover:[text-shadow:0_0_6px_rgba(0,0,0,0.9)]">
+                  View projects
+                </span>
+                <ArrowUpRight
+                  size={16}
+                  className="transition-all duration-200 group-hover:drop-shadow-[0_0_3px_rgba(0,0,0,0.9)]"
+                />
               </a>
 
               <a
@@ -119,8 +125,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          {/* RIGHT - PROFILE PHOTO */}
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center order-1 lg:order-2">
             <img
               src="/maalepic.png"
               alt="King Carlos Maale"
@@ -130,7 +135,7 @@ export default function Portfolio() {
 
         </div>
 
-        {/* MARQUEE */}
+
         <div className="mt-24 overflow-hidden border-y border-[#222] py-4 text-xs uppercase tracking-[.25em] text-neutral-600">
           <div className="marquee flex w-max gap-12">
             <span>Hardware</span>
@@ -216,14 +221,37 @@ export default function Portfolio() {
       <section id="education" className="mx-auto max-w-6xl px-5 py-28">
         <div className="grid gap-10 md:grid-cols-[180px_1fr]">
           <div className="section-number">04 / EDUCATION</div>
-          <div className="card p-7 md:p-9">
-            <p className="font-mono text-xs text-neutral-600">CURRENT</p>
-            <h2 className="mt-3 text-2xl font-bold">Bachelor of Science in Computer Engineering</h2>
-            <p className="mt-2 text-neutral-400">Dr. Yanga&apos;s Colleges, Inc. (DYCI)</p>
-            <p className="mt-5 text-sm leading-7 text-neutral-500">
-              Focus areas include embedded systems, programming, electronics, computer systems,
-              databases, networking, and software development.
-            </p>
+
+          <div className="space-y-5">
+
+            <div className="card p-7 md:p-9">
+              <p className="font-mono text-xs text-neutral-600">CURRENT</p>
+              <h2 className="mt-3 text-2xl font-bold">
+                Bachelor of Science in Computer Engineering
+              </h2>
+              <p className="mt-2 text-neutral-400">
+                Dr. Yanga&apos;s Colleges, Inc. (DYCI)
+              </p>
+              <p className="mt-5 text-sm leading-7 text-neutral-500">
+                Focus areas include embedded systems, programming, electronics,
+                computer systems, databases, networking, and software development.
+              </p>
+            </div>
+
+            <div className="card p-7 md:p-9">
+              <p className="font-mono text-xs text-neutral-600">GRADES 11–12</p>
+              <h2 className="mt-3 text-2xl font-bold">
+                Senior High School – STEM Strand
+              </h2>
+              <p className="mt-2 text-neutral-400">
+                Jesus Is Lord Colleges Foundation, Inc. (JILCF)
+              </p>
+              <p className="mt-5 text-sm leading-7 text-neutral-500">
+                Completed Senior High School under the Science, Technology,
+                Engineering, and Mathematics (STEM) strand.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
