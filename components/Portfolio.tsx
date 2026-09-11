@@ -127,7 +127,7 @@ export default function Portfolio() {
 
           <div className="flex items-center justify-center order-1 lg:order-2">
             <img
-              src="Public/maalepic.png"
+              src="/maalepic.png"
               alt="King Carlos Maale"
               className="w-full max-w-md object-contain"
             />
