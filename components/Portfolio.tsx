@@ -61,50 +61,91 @@ export default function Portfolio() {
           <a href="#home" className="font-bold tracking-tight">KC<span className="text-[#d7ff55]">.</span></a>
 
           <nav className="hidden gap-7 text-sm text-neutral-400 md:flex">
-            {["about","projects","stack","education","contact"].map(x => (
+            {["about", "projects", "stack", "education", "contact"].map(x => (
               <a key={x} href={`#${x}`} className="hover:text-white transition">{x}</a>
             ))}
           </nav>
 
           <button className="md:hidden" onClick={() => setMenu(!menu)} aria-label="Toggle menu">
-            {menu ? <X size={20}/> : <Menu size={20}/>}
+            {menu ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
         {menu && (
           <div className="border-t border-[#222] px-5 py-4 md:hidden">
-            {["about","projects","stack","education","contact"].map(x => (
+            {["about", "projects", "stack", "education", "contact"].map(x => (
               <a onClick={() => setMenu(false)} key={x} href={`#${x}`} className="block py-2 text-neutral-300">{x}</a>
             ))}
           </div>
         )}
       </header>
 
-      <section id="home" className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-5 pt-24">
-        <div className="reveal max-w-4xl">
-          <p className="mb-5 font-mono text-xs uppercase tracking-[.28em] text-[#d7ff55]">
-            Available for opportunities
-          </p>
-          <h1 className="text-5xl font-black tracking-[-.05em] sm:text-7xl md:text-8xl">
-            King Carlos<br />Maale<span className="text-[#d7ff55]">.</span>
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg text-neutral-400">
-            {typed}<span className="animate-pulse text-[#d7ff55]">_</span> building practical
-            hardware and software solutions.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#projects" className="flex items-center gap-2 bg-[#d7ff55] px-5 py-3 text-sm font-bold text-black hover:opacity-90">
-              View projects <ArrowUpRight size={16}/>
-            </a>
-            <a href="#contact" className="flex items-center gap-2 border border-[#333] px-5 py-3 text-sm hover:border-[#666]">
-              Contact me <Mail size={16}/>
-            </a>
+      <section
+        id="home"
+        className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-5 pt-24"
+      >
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+
+          {/* LEFT - INTRO */}
+          <div className="reveal">
+            <p className="mb-5 font-mono text-xs uppercase tracking-[.28em] text-[#d7ff55]">
+              Available for opportunities
+            </p>
+
+            <h1 className="text-5xl font-black tracking-[-.05em] sm:text-7xl md:text-8xl">
+              King Carlos<br />
+              Maale<span className="text-[#d7ff55]">.</span>
+            </h1>
+
+            <p className="mt-7 max-w-2xl text-lg text-neutral-400">
+              {typed}
+              <span className="animate-pulse text-[#d7ff55]">_</span> building practical
+              hardware and software solutions.
+            </p>
+
+            <div className="mt-9 flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                className="flex items-center gap-2 bg-[#d7ff55] px-5 py-3 text-sm font-bold text-black hover:opacity-90"
+              >
+                View projects <ArrowUpRight size={16} />
+              </a>
+
+              <a
+                href="#contact"
+                className="flex items-center gap-2 border border-[#333] px-5 py-3 text-sm hover:border-[#666]"
+              >
+                Contact me <Mail size={16} />
+              </a>
+            </div>
           </div>
+
+          {/* RIGHT - PROFILE PHOTO */}
+          <div className="flex items-center justify-center">
+            <img
+              src="/profile-halftone.png"
+              alt="King Carlos Maale"
+              className="w-full max-w-md object-contain"
+            />
+          </div>
+
         </div>
 
+        {/* MARQUEE */}
         <div className="mt-24 overflow-hidden border-y border-[#222] py-4 text-xs uppercase tracking-[.25em] text-neutral-600">
           <div className="marquee flex w-max gap-12">
-            <span>Hardware</span><span>Embedded Systems</span><span>Software</span><span>IoT</span><span>Database</span><span>Computer Engineering</span>
-            <span>Hardware</span><span>Embedded Systems</span><span>Software</span><span>IoT</span><span>Database</span><span>Computer Engineering</span>
+            <span>Hardware</span>
+            <span>Embedded Systems</span>
+            <span>Software</span>
+            <span>IoT</span>
+            <span>Database</span>
+            <span>Computer Engineering</span>
+
+            <span>Hardware</span>
+            <span>Embedded Systems</span>
+            <span>Software</span>
+            <span>IoT</span>
+            <span>Database</span>
+            <span>Computer Engineering</span>
           </div>
         </div>
       </section>
@@ -120,9 +161,9 @@ export default function Portfolio() {
               combine hardware experimentation with software development to solve real-world problems.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              <div className="card p-5"><CircuitBoard className="mb-5 text-[#d7ff55]"/><b>Hardware</b><p className="mt-2 text-sm text-neutral-500">Arduino, ESP32 and electronics.</p></div>
-              <div className="card p-5"><Code2 className="mb-5 text-[#d7ff55]"/><b>Software</b><p className="mt-2 text-sm text-neutral-500">Applications, dashboards and systems.</p></div>
-              <div className="card p-5"><Database className="mb-5 text-[#d7ff55]"/><b>Data</b><p className="mt-2 text-sm text-neutral-500">SQL, SQLite and system databases.</p></div>
+              <div className="card p-5"><CircuitBoard className="mb-5 text-[#d7ff55]" /><b>Hardware</b><p className="mt-2 text-sm text-neutral-500">Arduino, ESP32 and electronics.</p></div>
+              <div className="card p-5"><Code2 className="mb-5 text-[#d7ff55]" /><b>Software</b><p className="mt-2 text-sm text-neutral-500">Applications, dashboards and systems.</p></div>
+              <div className="card p-5"><Database className="mb-5 text-[#d7ff55]" /><b>Data</b><p className="mt-2 text-sm text-neutral-500">SQL, SQLite and system databases.</p></div>
             </div>
           </div>
         </div>
@@ -142,7 +183,7 @@ export default function Portfolio() {
                       <h3 className="mt-2 text-2xl font-bold">{p.title}</h3>
                       <p className="mt-1 text-xs uppercase tracking-wider text-[#d7ff55]">{p.type}</p>
                     </div>
-                    <ArrowUpRight className="text-neutral-600"/>
+                    <ArrowUpRight className="text-neutral-600" />
                   </div>
                   <p className="mt-6 max-w-3xl leading-7 text-neutral-400">{p.description}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
@@ -163,7 +204,7 @@ export default function Portfolio() {
             <div className="mt-10 grid gap-px overflow-hidden border border-[#222] bg-[#222] sm:grid-cols-2">
               {skills.map(([name, list]) => (
                 <div key={name} className="bg-[#0b0b0b] p-6">
-                  <div className="mb-3 flex items-center gap-2 font-bold"><Cpu size={17} className="text-[#d7ff55]"/>{name}</div>
+                  <div className="mb-3 flex items-center gap-2 font-bold"><Cpu size={17} className="text-[#d7ff55]" />{name}</div>
                   <p className="text-sm text-neutral-500">{list}</p>
                 </div>
               ))}
@@ -221,13 +262,13 @@ export default function Portfolio() {
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="mailto:your-email@example.com">
-              <Mail size={16}/> Email
+              <Mail size={16} /> Email
             </a>
             <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="https://github.com/" target="_blank">
-              <Github size={16}/> GitHub <ExternalLink size={13}/>
+              <Github size={16} /> GitHub <ExternalLink size={13} />
             </a>
             <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="https://www.linkedin.com/" target="_blank">
-              <Linkedin size={16}/> LinkedIn <ExternalLink size={13}/>
+              <Linkedin size={16} /> LinkedIn <ExternalLink size={13} />
             </a>
           </div>
         </div>
@@ -235,7 +276,7 @@ export default function Portfolio() {
 
       <footer className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-[#222] px-5 py-8 text-xs text-neutral-600 sm:flex-row sm:items-center sm:justify-between">
         <span>© {new Date().getFullYear()} King Carlos Maale</span>
-        <span className="flex items-center gap-2"><Terminal size={13}/> Built with Next.js + TypeScript</span>
+        <span className="flex items-center gap-2"><Terminal size={13} /> Built with Next.js + TypeScript</span>
       </footer>
     </main>
   );
