@@ -122,7 +122,7 @@ export default function Portfolio() {
           {/* RIGHT - PROFILE PHOTO */}
           <div className="flex items-center justify-center">
             <img
-              src="/profile-halftone.png"
+              src="/maalepic.png"
               alt="King Carlos Maale"
               className="w-full max-w-md object-contain"
             />
@@ -261,13 +261,13 @@ export default function Portfolio() {
             Interested in collaborating, discussing a project, or connecting? Reach out through the links below.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="mailto:your-email@example.com">
+            <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="mailto:kingcarlosmaale@gmail.com">
               <Mail size={16} /> Email
             </a>
-            <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="https://github.com/" target="_blank">
+            <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="https://github.com/kingcarlosmaale14/" target="_blank">
               <Github size={16} /> GitHub <ExternalLink size={13} />
             </a>
-            <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="https://www.linkedin.com/" target="_blank">
+            <a className="flex items-center gap-2 border border-[#333] px-4 py-3 text-sm hover:border-[#666]" href="https://www.linkedin.com/in/kingcarlosmaale/" target="_blank">
               <Linkedin size={16} /> LinkedIn <ExternalLink size={13} />
             </a>
           </div>
